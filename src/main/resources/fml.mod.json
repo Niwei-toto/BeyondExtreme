@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "bex",
+  "version": "${version}",
+  "depends": {
+    "minecraft": "1.6.4-mite",
+    "fishmodloader": ">=3.4.1",
+    "mite_ite": ">=2.0.16",
+    "rusted_iron_core": ">=1.3.7",
+    "shop": ">=1.0.0",
+    "extreme": ">=0.1.6.6"
+  },
+  "environment": "*",
+  "name": "Beyond Extreme",
+  "icon": "assets/bex/bex_icon.png",
+  "description": "Extreme Addon Mod",
+  "authors": [
+    "Xy_Lose",
+    "Huix"
+  ],
+  "contributors": [
+    "Rizur"
+  ],
+  "contact": {
+    "homepage": "https://github.com/MinecraftIsTooEasy/BeyondExtreme",
+    "issues": "https://github.com/MinecraftIsTooEasy/BeyondExtreme/issues"
+  },
+  "entrypoints": {
+    "preLaunch": [
+      "net.moddedmite.mitemod.bex.BEXEarlyRiser"
+    ],
+    "main": [
+      "net.moddedmite.mitemod.bex.BEXInit"
+    ],
+    "mite_ite": [
+      "net.moddedmite.mitemod.bex.compat.BEXITEPlugin"
+    ],
+    "shop": [
+      "net.moddedmite.mitemod.bex.compat.BEXShopPlugin"
+    ]
+  },
+  "mixins": [
+    "bex.mixins.json"
+  ],
+  "accessWidener": "bex.accesswidener",
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/World": ["net/xiaoyu233/mitemod/miteite/api/ITEWorld"]
+    }
+  }
+}

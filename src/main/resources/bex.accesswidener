@@ -1,0 +1,10 @@
+accessWidener v2 named
+accessible method net/minecraft/Block setStepSound (Lnet/minecraft/StepSound;)Lnet/minecraft/Block;
+accessible method net/minecraft/Block setHardness (F)Lnet/minecraft/Block;
+accessible field net/minecraft/ContainerWorkbench x I
+accessible field net/minecraft/ContainerWorkbench y I
+accessible field net/minecraft/ContainerWorkbench z I
+accessible method net/minecraft/EntityVillager adjustProbability (F)F
+accessible field net/minecraft/Material name Ljava/lang/String;
+accessible field net/minecraft/BlockAnvil anvilIconNames [Ljava/lang/String;
+accessible field net/minecraft/BlockAnvil iconArray [Lnet/minecraft/Icon;
