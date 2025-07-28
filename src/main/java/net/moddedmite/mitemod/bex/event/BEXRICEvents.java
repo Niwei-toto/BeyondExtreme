@@ -32,7 +32,7 @@ public class BEXRICEvents extends Handlers {
         ArmorModel.register(new BEXArmorModelListener());
         Enchanting.register(new IEnchantingListener() {
             public int onMaxEnchantNumModify(Random random, ItemStack item_stack, int enchantment_levels, int original) {
-                return item_stack.getItem().getHardestMetalMaterial() == BEXMaterials.enchant || item_stack.getItem().getHardestMetalMaterial() == BEXMaterials.infinity ? original + 2 : original;
+                return item_stack.getItem().getHardestMetalMaterial() == BEXMaterials.enchant ? original + 3 : original;
             }
         });
         BeaconUpdate.register(new IBeaconUpdateHandler() {

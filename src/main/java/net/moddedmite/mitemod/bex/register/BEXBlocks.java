@@ -94,15 +94,11 @@ public class BEXBlocks extends Block {
                 'C', coinVibranium,
                 'A', MITEITEBlockRegistryInit.anvilVibranium
         );
-        register.registerShapedRecipe(new ItemStack(dragonSpawn), true,
-                "GLZ",
-                "ACP",
-                'G', BEXItems.voucherGoldBodyCore,
-                'L', EXItemsRegistryInit.voucherClubCore,
-                'Z', BEXItems.voucherZombieBoss,
-                'A', BEXItems.voucherUltimateAnnihilation,
-                'C', EXItemsRegistryInit.voucherCore,
-                'P', BEXItems.voucherSpiderQueen
+        register.registerShapelessRecipe(new ItemStack(dragonSpawn), true,
+                EXItemsRegistryInit.voucherClubCore,
+                BEXItems.voucherZombieBoss,
+                EXItemsRegistryInit.voucherCore,
+                BEXItems.voucherSpiderQueen
         );
         FurnaceRecipes.smelting().addSmelting(BEXBlocks.volcanoEmeraldOre.blockID, new ItemStack(Item.emerald));
         FurnaceRecipes.smelting().addSmelting(BEXBlocks.volcanoDiamondOre.blockID, new ItemStack(Item.diamond));
