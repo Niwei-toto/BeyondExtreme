@@ -43,7 +43,7 @@ public class BEXItems {
     public static final ItemInfinityArmor unassailableLeggings = new ItemInfinityArmor(Constant.getNextItemID(), BEXMaterials.infinity, 2, false);
     public static final ItemInfinityArmor unassailableBoots = new ItemInfinityArmor(Constant.getNextItemID(), BEXMaterials.infinity, 3, false);
     public static final Item ringKillerInfinity = new ItemInfinityRingKiller(Constant.getNextItemID(), BEXMaterials.infinity).setUnlocalizedName("ringKillerInfinity").setCreativeTab(tabBEX);
-    public static final Item itemDynamicCoreInfinity = new ItemDynamicCore(Constant.getNextItemID(), BEXMaterials.infinity, 5).setUnlocalizedName("dynamic_core_infinity").setCreativeTab(tabBEX);
+    public static final Item itemDynamicCoreInfinity = new ItemDynamicCore(Constant.getNextItemID(), BEXMaterials.infinity, 32767).setUnlocalizedName("dynamic_core_infinity").setCreativeTab(tabBEX);
     public static final ItemFinalFood AvariceMeatBalls = (ItemFinalFood) new ItemFinalFood(Constant.getNextItemID()).setCreativeTab(tabBEX);
 
     public static final ItemCoin coinVibranium = (ItemCoin) ReflectHelper.createInstance(ItemCoin.class, new Class[]{Integer.TYPE, Material.class}, Constant.getNextItemID(), Materials.vibranium).setCreativeTab(tabBEX);

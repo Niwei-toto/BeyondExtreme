@@ -1,5 +1,6 @@
 package net.moddedmite.mitemod.bex.mixin.common.item.enchantment;
 
+import cn.wensc.mitemod.extreme.item.ItemClubMetal;
 import net.minecraft.*;
 import net.moddedmite.mitemod.bex.register.BEXMaterials;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +16,7 @@ public abstract class EnchantmentDamageMixin extends Enchantment {
 
    @Inject(method = "canEnchantItem", at = @At("HEAD"), cancellable = true)
    public void injectVibraniumCheck(Item item, CallbackInfoReturnable<Boolean> cir) {
-      if (this == Enchantment.smite && ((item.getHardestMetalMaterial() == BEXMaterials.enchant))) {
+      if (this == Enchantment.smite && item.getHardestMetalMaterial() == BEXMaterials.enchant && (item instanceof ItemSword || item instanceof ItemClubMetal)) {
          cir.setReturnValue(true);
       }
    }

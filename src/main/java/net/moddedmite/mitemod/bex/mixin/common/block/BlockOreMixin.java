@@ -14,7 +14,7 @@ public class BlockOreMixin {
         EntityPlayer player = info.getResponsiblePlayer();
         float melting = 0.0F;
         int meltingID = 0;
-        if (player.getHeldItemStack() != null) {
+        if (player != null && player.getHeldItemStack() != null) {
             melting = (BEXToolModifierTypes.MELTING.getModifierValue(player.getHeldItemStack().getTagCompound()));
         }
         if (melting != 0.0F) {
