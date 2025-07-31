@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 @Mixin(BlockOre.class)
 public class BlockOreMixin {
     @ModifyArg(method = "dropBlockAsEntityItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/Block;dropBlockAsEntityItem(Lnet/minecraft/BlockBreakInfo;IIIF)I"), index = 1)
-    private int applyMeltingModifier(int id_dropped, @Local(argsOnly = true) BlockBreakInfo info, @Local boolean suppress_fortune) {
+    private int applyMeltingModifier(int id_dropped, @Local(argsOnly = true) BlockBreakInfo info) {
         EntityPlayer player = info.getResponsiblePlayer();
         float melting = 0.0F;
         int meltingID = 0;
@@ -32,5 +32,20 @@ public class BlockOreMixin {
             if (meltingID != 0) return meltingID;
         }
         return id_dropped;
+    }
+
+    @ModifyArg(method = "dropBlockAsEntityItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/Block;dropBlockAsEntityItem(Lnet/minecraft/BlockBreakInfo;IIIF)I"), index = 2)
+    private int meltingModifierMetadataFix(int metadata_dropped, @Local(argsOnly = true) BlockBreakInfo info, @Local(name = "id_dropped") int id_dropped) {
+        EntityPlayer player = info.getResponsiblePlayer();
+        float melting = 0.0F;
+        if (player != null && player.getHeldItemStack() != null) {
+            melting = (BEXToolModifierTypes.MELTING.getModifierValue(player.getHeldItemStack().getTagCompound()));
+        }
+        if (melting != 0.0F) {
+            if (id_dropped == Block.oreGold.blockID) {
+                return 0;
+            }
+        }
+        return metadata_dropped;
     }
 }

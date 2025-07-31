@@ -23,7 +23,7 @@ public class EntityAncientDragonMixin extends EntityMob {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void addAIHitBox(World par1World, CallbackInfo ci) {
-        this.setSize(0.1F, 0.1F);
+        this.setSize(0.5F, 0.5F);
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityVillager.class, 1.0D, true));
@@ -60,6 +60,7 @@ public class EntityAncientDragonMixin extends EntityMob {
     protected void dropFewItems(boolean recently_hit_by_player, DamageSource damage_source) {
         if (recently_hit_by_player) {
             this.dropItem(BEXItems.AvariceMeatBalls);
+            this.dropItem(BEXItems.infinityNugget);
         }
     }
 

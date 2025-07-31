@@ -1,5 +1,6 @@
 package net.moddedmite.mitemod.bex.register;
 
+import cn.wensc.mitemod.extreme.register.EXBlocksRegistryInit;
 import cn.wensc.mitemod.extreme.register.EXItemsRegistryInit;
 import moddedmite.rustedironcore.api.block.WorkbenchBlock;
 import moddedmite.rustedironcore.api.event.events.CraftingRecipeRegisterEvent;
@@ -7,7 +8,7 @@ import net.minecraft.*;
 import net.moddedmite.mitemod.bex.BEXInit;
 import net.moddedmite.mitemod.bex.block.BlockBEXAnvil;
 import net.moddedmite.mitemod.bex.block.BlockBEXWorkbench;
-import net.moddedmite.mitemod.bex.block.BlockFu;
+import net.moddedmite.mitemod.bex.block.BlockDragonSpawn;
 import net.moddedmite.mitemod.bex.block.BlockVolcanoStone;
 import net.xiaoyu233.fml.reload.event.ItemRegistryEvent;
 import net.xiaoyu233.fml.reload.utils.IdUtil;
@@ -17,8 +18,8 @@ import net.xiaoyu233.mitemod.miteite.item.material.Materials;
 
 import static net.moddedmite.mitemod.bex.register.BEXItems.*;
 
-public class BEXBlocks extends Block {
-    public static final Block vibraniumDoor = ReflectHelper.createInstance(BlockDoor.class, new Class[]{int.class, Material.class}, IdUtil.getNextBlockID(), Materials.vibranium).setStepSound(soundMetalFootstep);
+public class BEXBlocks {
+    public static final Block vibraniumDoor = ReflectHelper.createInstance(BlockDoor.class, new Class[]{int.class, Material.class}, IdUtil.getNextBlockID(), Materials.vibranium).setStepSound(Block.soundMetalFootstep);
     public static final BlockOreStorage blockInfinity = (BlockOreStorage) new BlockOreStorage(IdUtil.getNextBlockID(), BEXMaterials.infinity).setCreativeTab(tabBEX);
     public static final BlockAnvil anvilInfinity = new BlockBEXAnvil(IdUtil.getNextBlockID(), BEXMaterials.infinity);
     public static final Block volcanoStone = new BlockVolcanoStone(IdUtil.getNextBlockID());
@@ -26,17 +27,13 @@ public class BEXBlocks extends Block {
     public static final Block volcanoCobblestone = ReflectHelper.createInstance(Block.class, new Class[]{int.class, Material.class, BlockConstants.class}, IdUtil.getNextBlockID(), BEXMaterials.stone, new BlockConstants())
             .setCreativeTab(tabBEX).setHardness(2.0F);
     public static final Block volcanoAshes = ReflectHelper.createInstance(Block.class, new Class[]{int.class, Material.class, BlockConstants.class}, IdUtil.getNextBlockID(), BEXMaterials.sand, new BlockConstants())
-            .setCreativeTab(tabBEX).setStepSound(soundSandFootstep);
+            .setCreativeTab(tabBEX).setStepSound(Block.soundSandFootstep);
     public static final Block volcanoEmeraldOre = new BlockOre(IdUtil.getNextBlockID(), Material.emerald, 3).setHardness(4.0F).setCreativeTab(tabBEX);
     public static final Block volcanoMithrilOre = new BlockOre(IdUtil.getNextBlockID(), Material.mithril, 3).setHardness(4.0F).setCreativeTab(tabBEX);
     public static final Block volcanoDiamondOre = new BlockOre(IdUtil.getNextBlockID(), Material.diamond, 3).setHardness(4.0F).setCreativeTab(tabBEX);
-    public static final BlockFu dragonSpawn = new BlockFu(IdUtil.getNextBlockID());
+    public static final BlockDragonSpawn dragonSpawn = new BlockDragonSpawn(IdUtil.getNextBlockID());
 //    public static final Block volcanoGravel = (ReflectHelper.createInstance(BlockVolcanoGravel.class, new Class[] {int.class,Material.class}, IdUtil.getNextBlockID(), BEXMaterials.sand)).setUnlocalizedName("blockVolcanoGravel");
     public static final WorkbenchBlock infinityWorkBench = (WorkbenchBlock) new BlockBEXWorkbench(IdUtil.getNextBlockID(), BEXMaterials.infinity, Float.MAX_VALUE, Materials.vibranium);
-
-    protected BEXBlocks(int par1, Material par2Material, BlockConstants constants) {
-        super(par1, par2Material, constants);
-    }
 
     public static void registerBlocks(ItemRegistryEvent event) {
         registerBlock(event, "door_vibranium", vibraniumDoor);
@@ -55,7 +52,7 @@ public class BEXBlocks extends Block {
         registerBlock(event, "volcano/volcano_mithril_ore", volcanoMithrilOre);
         registerBlock(event, "volcano/volcano_emerald_ore", volcanoEmeraldOre);
 
-        registerBlock(event, "china_fu", dragonSpawn);
+        registerBlock(event, "dragon_spawn", dragonSpawn);
     }
 
     private static Block registerAnvil(ItemRegistryEvent event, String resourceLocation, BlockAnvil anvil) {
@@ -100,6 +97,10 @@ public class BEXBlocks extends Block {
                 EXItemsRegistryInit.voucherCore,
                 BEXItems.voucherSpiderQueen
         );
+        infinityWorkBench.registerSimpleRecipe(register);
+        for (int plank_subtype = 0; plank_subtype < 2; ++plank_subtype) {
+            register.registerShapedRecipe(new ItemStack(infinityWorkBench), true, new Object[]{"IL", "s#", 'I', ItemIngot.getMatchingItem(ItemIngot.class, infinityWorkBench.getMaterial()), 'L', Item.leather, 's', Item.stick, '#', new ItemStack(EXBlocksRegistryInit.planksEX, 1, plank_subtype)});
+        }
         FurnaceRecipes.smelting().addSmelting(BEXBlocks.volcanoEmeraldOre.blockID, new ItemStack(Item.emerald));
         FurnaceRecipes.smelting().addSmelting(BEXBlocks.volcanoDiamondOre.blockID, new ItemStack(Item.diamond));
         FurnaceRecipes.smelting().addSmelting(BEXBlocks.volcanoMithrilOre.blockID, new ItemStack(Item.ingotMithril));

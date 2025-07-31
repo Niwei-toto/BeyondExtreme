@@ -80,6 +80,7 @@ tile.anvil_infinity.veryDamaged.name=独岳之砧
 tile.block_infinity.name=无尽块
 
 tile.china_fu.name=福块
+tile.dragon_spawn.name=龙之核心
 
 material.vibranium.name=振金
 material.enchant.name=附魔金属

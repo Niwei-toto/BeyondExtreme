@@ -2,16 +2,17 @@ package net.moddedmite.mitemod.bex.block;
 
 import net.minecraft.*;
 import net.moddedmite.mitemod.bex.register.BEXItems;
+import net.xiaoyu233.mitemod.miteite.entity.EntityAncientDragon;
 
-public class BlockFu extends Block {
-    public BlockFu(int par1) {
+public class BlockDragonSpawn extends Block {
+    public BlockDragonSpawn(int par1) {
         super(par1, Material.wood, (new BlockConstants()).setNeverHidesAdjacentFaces().setNotAlwaysLegal());
 //        this.setBounds(true);
         this.setMaxStackSize(64);
         this.setCreativeTab(BEXItems.tabBEX);
     }
 
-    boolean HasSpawnAncientDragon = false;
+    boolean HasSpawnDragon = false;
 
 
 //    private void setBounds(boolean for_all_threads) {
@@ -32,8 +33,8 @@ public class BlockFu extends Block {
 
     public int dropBlockAsEntityItem(BlockBreakInfo info) {
         this.dropXpOnBlockBreak(info.world, info.x, info.y, info.z, 15 + info.world.rand.nextInt(15) + info.world.rand.nextInt(15));
-        if (info.world.isTheEnd() && info.world.rand.nextFloat() < 100) {
-            EntityDragon ancientDragon = new EntityDragon(info.world);
+        if (info.world.isUnderworld() && info.world.rand.nextFloat() < 100) {
+            EntityAncientDragon ancientDragon = new EntityAncientDragon(info.world);
             ancientDragon.setPosition(info.x, info.y, info.z);
             ancientDragon.refreshDespawnCounter(-9600);
             if (info.getResponsiblePlayer() != null) {
@@ -42,7 +43,19 @@ public class BlockFu extends Block {
             ancientDragon.entityFX(EnumEntityFX.summoned);
             ancientDragon.onSpawnWithEgg(null);
             info.world.spawnEntityInWorld(ancientDragon);
-            HasSpawnAncientDragon = true;
+            HasSpawnDragon = true;
+        }
+        if (info.world.isTheEnd() && info.world.rand.nextFloat() < 100) {
+            EntityDragon endDragon = new EntityDragon(info.world);
+            endDragon.setPosition(info.x, info.y, info.z);
+            endDragon.refreshDespawnCounter(-9600);
+            if (info.getResponsiblePlayer() != null) {
+                endDragon.setAttackTarget(info.getResponsiblePlayer());
+            }
+            endDragon.entityFX(EnumEntityFX.summoned);
+            endDragon.onSpawnWithEgg(null);
+            info.world.spawnEntityInWorld(endDragon);
+            HasSpawnDragon = true;
         }
 
         return 0;
