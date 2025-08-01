@@ -19,5 +19,8 @@ public abstract class EnchantmentDamageMixin extends Enchantment {
       if (this == Enchantment.smite && item.getHardestMetalMaterial() == BEXMaterials.enchant && (item instanceof ItemSword || item instanceof ItemClubMetal)) {
          cir.setReturnValue(true);
       }
+      if (this == Enchantment.smite && item instanceof ItemBattleAxe) {
+         cir.setReturnValue(true);
+      }
    }
 }
