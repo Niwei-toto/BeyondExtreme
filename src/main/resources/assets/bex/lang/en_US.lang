@@ -1,87 +1,95 @@
-item.vibranium_coin.name=振金币
-item.fishing_rods/vibranium_fishrod.name=振金钓鱼竿
-item.vibranium_arrow.name=振金箭
+item.vibranium_coin.name=Vibranium Coin
+item.fishing_rods/vibranium_fishrod.name=Fishing Rod
+item.vibranium_arrow.name=Vibranium Arrow
 
-item.enhance_stone/copper.name=磨刀石
+item.enhance_stone/copper.name=Copper Enhance Stone
 
-tile.volcano/volcano_stone.name=火山岩
-tile.volcano/volcano_sand.name=火山沙
-tile.volcano/volcano_cobble_stone.name=火山圆石
-tile.volcano/volcano_ashes.name=火山灰烬
-tile.volcano/volcano_diamond_ore.name=火山钻石矿
-tile.volcano/volcano_mithril_ore.name=火山秘银矿
-tile.volcano/volcano_emerald_ore.name=火山绿宝石矿
+tile.volcano/volcano_stone.name=Volcanic Stone
+tile.volcano/volcano_sand.name=Volcanic Sand
+tile.volcano/volcano_cobble_stone.name=Volcanic Cobblestone
+tile.volcano/volcano_ashes.name=Volcanic Ashes
+tile.volcano/volcano_diamond_ore.name=Diamond Volcanic Ore
+tile.volcano/volcano_mithril_ore.name=Mithril Volcanic Ore
+tile.volcano/volcano_emerald_ore.name=Emerald Volcanic Ore
 
-item.ring_killer_infinity.name=杀戮之环
+item.ring_killer_infinity.name=Infinity Ring Killer
 
-item.vibranium_door.name=振金门
+item.vibranium_door.name=Vibranium Door
 
-achievement.infinitySword=无敌了？不，才刚刚起步罢了
-achievement.infinitySword.desc=制作出你的第一个神器：攻伐之剑
-achievement.UAKiller=有招胜无招
-achievement.UAKiller.desc=击败烈焰人刷怪笼中封印的最终Boss:终湮骷髅
+achievement.infinitySword=Invincible? No, just getting started.
+achievement.infinitySword.desc=Create your first artifact: Sword of Attack
+achievement.UAKiller=Having a strategy is better than having no strategy
+achievement.UAKiller.desc=Defeat the final boss, the Ultimate Annihilation Skeleton, which is sealed in the Blaze spawner.
 
-enchantment.forge=锻造
-enchantment.range=范围杀戮
-enchantment.unassailable=无懈可击
+enchantment.forge=Forging
+enchantment.range=Range Killing
+enchantment.unassailable=Unassailable
 
-entity.EntitySkeletonBoss.name=骷髅BOSS
-entity.EntitySkeletonShadow.name=虚无骷髅
-entity.EntityBedrockElemental.name=基岩元素
-entity.EntityZombieDoorLord.name=盗贼僵尸领主
-entity.EntitySpiderQueen.name=蛛后
-entity.EntityUltimateAnnihilationSkeleton.name=终湮骷髅
-entity.EntityZombieDoorWood.name=僵尸盗贼仆从
-entity.EntityZombieDoorDeep.name=僵尸盗贼
-entity.EntityZombieMiner.name=僵尸矿工
-entity.EntityAncientDragon.name=远古巨龙
+entity.EntitySkeletonBoss.name=Skeleton Boss
+entity.EntitySkeletonShadow.name=Shadow Skeleton
+entity.EntityBedrockElemental.name=Bedrock Elemental
+entity.EntityZombieDoorLord.name=Door Zombie Lord
+entity.EntitySpiderQueen.name=Spider Queen
+entity.EntityUltimateAnnihilationSkeleton.name=Ultimate Annihilation Skeleton
+entity.EntityZombieDoorWood.name=Wood Door Zombie
+entity.EntityZombieDoorDeep.name=Door Zombie
+entity.EntityZombieMiner.name=Zombie Miner
+entity.EntityAncientDragon.name=Ancient Dragon
 
-gui.forgingTable.needItem=§l§o顶上的格子需要放任意物品
+gui.forgingTable.needItem=§l§oThe top slot needs to place any item
 
-item.dynamic_core_infinity.name=永恒之火
+item.dynamic_core_infinity.name=Infinity Dynamic Core
 
-item.voucher_zombieboss.name=僵尸BOSS凭证
-item.voucher_ghast.name=血泪凭证
-item.voucher_bedrock.name=基岩凭证
-item.voucher_vibraniumdoor.name=僵尸盗贼领主凭证
-item.voucher_goldbody_core.name=金身核心
-item.voucher_skeletonboss.name=骷髅boss凭证
-item.voucher_ultimateannihilation.name=终湮骷髅凭证
-item.voucher_spiderqueen.name=蛛后凭证
-item.voucher_zombieminer.name=僵尸矿工凭证
+item.voucher_zombieboss.name=Zombie Boss Voucher
+item.voucher_ghast.name=Bloody Tears Voucher
+item.voucher_bedrock.name=Bedrock Voucher
+item.voucher_vibraniumdoor.name=Door Zombie Lord Voucher
+item.voucher_goldbody_core.name=Unassailable Voucher
+item.voucher_skeletonboss.name=Skeleton Boss Voucher
+item.voucher_ultimateannihilation.name=Ultimate Annihilation Skeleton Voucher
+item.voucher_spiderqueen.name=Spider Queen Voucher
+item.voucher_zombieminer.name=Zombie Miner Voucher
 
-item.end_book.name=末影书
-item.spider_queen_silk.name=蛛后丝线
-item.avarice_meatballs.name=丸子
+item.end_book.name=Ender Chest Book
+item.spider_queen_silk.name=Spider Queen Silk
+item.avarice_meatballs.name=Avarice Meatballs
 
 item.ending.name=E N D I N G
-item.infinity_sword.name=攻伐之剑
-item.infinity_pickaxe.name=破妄之镐
-item.infinity_ingot.name=无尽之锭
-item.infinity_nugget.name=无尽残片
-item.unassailable_chestplate.name=无懈可击之甲
-item.unassailable_helmet.name=精妙绝伦之胄
-item.unassailable_leggings.name=行云流水之裈
-item.unassailable_boots.name=出神入化之靴
+item.infinity_sword.name=Sword of Attack
+item.infinity_pickaxe.name=Pickaxe of Delusion Breaker
+item.infinity_ingot.name=Infinity Ingot
+item.infinity_nugget.name=Infinity Nugget
+item.unassailable_chestplate.name=Unassailable Chestplate
+item.unassailable_helmet.name=Unassailable Helmet
+item.unassailable_leggings.name=Unassailable Leggings
+item.unassailable_boots.name=Unassailable Boots
 
-item.enchant_sword.name=附魔金属剑
-item.enchant_club.name=附魔金属棒
-item.enchant_pickaxe.name=附魔金属镐
-item.enchant_ingot.name=附魔金属锭
-item.enchant_nugget.name=附魔金属粒
-item.enchant_stick.name=附魔金属棍
-item.enchant_src.name=附魔源矿
+item.enchant_sword.name=Experience Sword
+item.enchant_club.name=Experience Club
+item.enchant_pickaxe.name=Experience Pickaxe
+item.enchant_ingot.name=Experience Ingot
+item.enchant_nugget.name=Experience Nugget
+item.enchant_stick.name=Experience Stick
+item.enchant_src.name=Raw Experience
 
-tile.toolbench.infinity.name=无尽工作台
-tile.anvil_infinity.name=五岳之砧
-tile.anvil_infinity.intact.name=五岳之砧
-tile.anvil_infinity.slightlyDamaged.name=三岳之砧
-tile.anvil_infinity.veryDamaged.name=独岳之砧
-tile.block_infinity.name=无尽块
+tile.toolbench.infinity.name=Infinity Tool Bench
+tile.anvil_infinity.name=Infinity Anvil
+tile.anvil_infinity.intact.name=Infinity Anvil
+tile.anvil_infinity.slightlyDamaged.name=Worn Infinity Anvil
+tile.anvil_infinity.veryDamaged.name=Badly Word Infinity Anvil
+tile.block_infinity.name=Infinity Block
 
-tile.china_fu.name=福块
+tile.china_fu.name=Blessing Block
+tile.dragon_spawn.name=Dragon Spawn Block
 
-material.vibranium.name=振金
-material.enchant.name=附魔金属
+material.vibranium.name=Vibranium
+material.enchant.name=Experience
 
-itemGroup.bex=超越极限
+itemGroup.bex=Beyond-Extreme
+
+modifier.armor.invincible.name=Invincible
+modifier.armor.agility.name=Agility
+modifier.tool.melting.name=Melting
+modifier.tool.last_stand.name=Last Stand
+modifier.tool.nature_blessing.name=Nature Blessing
+modifier.tool.apocalypse.name=Apocalypse

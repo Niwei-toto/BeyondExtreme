@@ -51,7 +51,7 @@ dependencies {
 
 	implementation files("${lib_dir}/RustedIronCore-1.3.9.jar")
 	implementation files("${lib_dir}/RustedIronCore-1.3.9-source.jar")
-	implementation files("${lib_dir}/MITE-ITE-2.0.16.2.jar")
+	implementation files("${lib_dir}/MITE-ITE-2.0.17.jar")
 	implementation files("${lib_dir}/Baubles.jar")
 	implementation files("${lib_dir}/Shop-1.0.0.jar")
 	implementation files("${lib_dir}/ManyLib-2.2.3.jar")
